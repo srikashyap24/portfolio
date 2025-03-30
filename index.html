@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Kashyap - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(8, 3, 42);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        main hr {
+            border: 0;
+            background-color: #9c97f1;
+            height: 1.2px;
+            margin: 20px 84px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(45, 45, 90);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(128, 128, 192);
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 195px 150px;
+        }
+
+        .firstSection>div {
+            width: 50%;
+        }
+
+        .leftSection {
+            font-size: 2rem;
+            margin: 40px 0 0 10px;
+        }
+
+        .rightSection img {
+            width: 300px;
+            /* box-shadow: 0px 4px 10px rgba(255, 1, 1, 0.999); */
+            margin: 0 120px;
+        }
+
+        .secondSection {
+            max-width: 80px;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 2rem;
+            margin-left: -50px;
+        }
+
+        .purple {
+            color: rgb(136, 93, 176);
+        }
+
+        img:hover {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+
+        #element {
+            color: rgb(136, 93, 176);
+
+        }
+
+        .educationSection {
+            max-width: 1200px;
+            margin: 50px auto 60px;
+            text-align: left;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .educationSection h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #9c97f1;
+        }
+
+        .education {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .edu-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .edu-logo {
+            width: 60px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .edu-item h2 {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .edu-item p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .skillsSection {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(136, 93, 176, 0.3));
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+            margin: 50px auto;
+            max-width: 1200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skillsSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #9c97f1;
+        }
+
+        .skillsContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skillCard {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .skillCard:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .skillCard i {
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .skillCard:hover i {
+            transform: scale(1.2);
+        }
+
+        .skillCard h2 {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .skillCard p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .experienceSection {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, rgba(0, 0, 50, 0.7), rgba(136, 93, 176, 0.5));
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 50, 0.3);
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .experienceSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #9c97f1;
+        }
+
+        .experienceContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .experienceCard {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .experienceCard:hover {
+            transform: scale(1.05);
+        }
+
+        .expLogo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-right: 20px;
+        }
+
+        .expDetails {
+            text-align: left;
+        }
+
+        .expDetails h2 {
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        .expDetails h3,
+        .duration,
+        .location {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .expDetails ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .expDetails ul li {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .expDetails ul li::before {
+            content: '\2022';
+            color: #f0db4f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .Projects {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, rgba(0, 0, 50, 0.7), rgba(136, 93, 176, 0.5));
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 50, 0.3);
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        /* .carousel {
+            display: flex;
+            gap: 20px;
+            perspective: 1200px;
+        } */
+        .project {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            cursor: pointer;
+        }
+
+        .Projects h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #9c97f1;
+        }
+
+        .projectsContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .project-card {
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card h2 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .project-card .tech-stack {
+            font-size: 16px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .project-card .description {
+            font-size: 18px;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .project-card .project-title {
+            font-weight: bold;
+        }
+
+        .project-card .project-description {
+            margin-top: 15px;
+        }
+
+        .project-card img {
+            width: 40%;
+            height: 250px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Sri Kashyap Dongari - Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="About" class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Sri Kashyap Dongari</span>
+                <div>and I am passionate about</div>
+                <!-- Element to contain animated typing -->
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="profile.png" alt="">
+            </div>
+        </section>
+        <hr />
+        <section class="educationSection">
+            <h1>Education</h1>
+            <div id="Education" class="education">
+                <div class="edu-item">
+                    <img src="bth.png" alt="Blekinge Institute of Technology Logo" class="edu-logo">
+                    <h2>Master Qualification Plan, Computer Science and Engineering</h2>
+                    <p><strong>Blekinge Institute of Technology, Karlskrona, Sweden</strong></p>
+                    <p>2025-2026</p>
+                    <p><em>Achievement:</em> Received Scholarship for maintaining academic excellence during Under
+                        Graduation</p>
+                </div>
+                <div class="edu-item">
+                    <img src="jntuh.png" alt="JNTUH Logo" class="edu-logo">
+                    <h2>Bachelor of Technology, Computer Science and Engineering</h2>
+                    <p><strong>Jawaharlal Nehru Technological University, Hyderabad, India</strong></p>
+                    <p>University College of Engineering, Science & Technology Hyderabad</p>
+                    <p>2021-2024</p>
+                    <p><strong>GPA:</strong> 8.6</p>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section id="Skills" class="skillsSection">
+            <h1>Skills</h1>
+            <div class="skillsContainer">
+                <div class="skillCard" data-icon="fas fa-code">
+                    <i class="fas fa-code"></i>
+                    <h2>Programming Languages</h2>
+                    <p>Python (NumPy, Pandas, Scikit-Learn), C, C++, JavaScript, R</p>
+                </div>
+                <div class="skillCard" data-icon="fas fa-cloud">
+                    <i class="fas fa-cloud"></i>
+                    <h2>Cloud</h2>
+                    <p>Amazon Web Services</p>
+                </div>
+                <div class="skillCard" data-icon="fas fa-laptop-code">
+                    <i class="fas fa-laptop-code"></i>
+                    <h2>Web Development</h2>
+                    <p>HTML, CSS, Bootstrap, jQuery</p>
+                </div>
+                <div class="skillCard" data-icon="fas fa-chart-bar">
+                    <i class="fas fa-chart-bar"></i>
+                    <h2>Data Visualization</h2>
+                    <p>Tableau, Matplotlib, Seaborn</p>
+                </div>
+                <div class="skillCard" data-icon="fas fa-database">
+                    <i class="fas fa-database"></i>
+                    <h2>Databases</h2>
+                    <p>MySQL, Microsoft SQL Server</p>
+                </div>
+                <div class="skillCard" data-icon="fas fa-server">
+                    <i class="fas fa-server"></i>
+                    <h2>Operating Systems</h2>
+                    <p>Windows, Mac OS, Unix</p>
+                </div>
+                <div class="skillCard" data-icon="fas fa-code-branch">
+                    <i class="fas fa-code-branch"></i>
+                    <h2>Version Control</h2>
+                    <p>Git, GitHub</p>
+                </div>
+                <div class="skillCard" data-icon="fas fa-calculator">
+                    <i class="fas fa-calculator"></i>
+                    <h2>Statistics</h2>
+                    <p>Descriptive Statistics, Inferential Statistics, Hypothesis Testing</p>
+                </div>
+                <div class="skillCard" data-icon="fas fa-users">
+                    <i class="fas fa-users"></i>
+                    <h2>Soft Skills</h2>
+                    <p>Teamwork, Leadership, Communication, Critical Thinking</p>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section id="Experience" class="experienceSection">
+            <h1>Experience</h1>
+            <div class="experienceContainer">
+
+                <!-- Data Science Club Experience -->
+                <div class="experienceCard">
+                    <img src="datasciencelogo.png" alt="Data Science Club Logo" class="expLogo">
+                    <div class="expDetails">
+                        <h2>Founder and Club Lead</h2>
+                        <h3>Data Science Student Club · Full-time</h3>
+                        <p class="duration">Nov 2023 - Nov 2024 · 1 yr 1 mo</p>
+                        <p class="location">Hyderabad, Telangana, India · On-site</p>
+                        <ul>
+                            <li>Established the Data Science Student Club to foster collaboration and skill development.
+                            </li>
+                            <li>Organized quizzes and learning sessions to encourage peer-to-peer knowledge sharing.
+                            </li>
+                            <li>Invited industry experts to present insights on emerging technologies.</li>
+                            <li>Led student-driven workshops on Machine Learning, Data Analytics, and Cloud Computing.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technical Fest Coordinator Experience -->
+                <div class="experienceCard">
+                    <img src="jntuh.png" alt="JNTUH Logo" class="expLogo">
+                    <div class="expDetails">
+                        <h2>Technical Fest Coordinator</h2>
+                        <h3>JNTUH College of Engineering Hyderabad · Full-time</h3>
+                        <p class="duration">Feb 2024 - May 2024 · 4 mos</p>
+                        <p class="location">Hyderabad, Telangana, India · On-site</p>
+                        <ul>
+                            <li>Led the planning and execution of QUEST, the annual technical fest of the Computer
+                                Science department, which brought together students from nearly 100 colleges across
+                                Telangana and Andhra Pradesh.</li>
+                            <li>Organized coding contests, hackathons, and technical workshops.</li>
+                            <li>Coordinated large-scale cultural events, including flash mobs and traditional nights.
+                            </li>
+                            <li>Secured sponsorships to successfully fund and scale the event.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <hr />
+        <section id="Projects" class="Projects">
+            <h1>
+                Projects
+            </h1>
+            <div class="projectsContainer">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h2>Campus Track - AI-Powered Student Tracking System & Emergency Sign Detection</h2>
+                    <div class="tech-stack">Technologies: Python, OpenCV, Facial Recognition, HTML, CSS, JavaScript,
+                        MediaPipe</div>
+                    <div class="description">
+                        <p><span class="project-title">Campus Track</span>is an AI-based face recognition system
+                            designed to enhance campus security and streamline attendance tracking. It accurately
+                            detects and identifies students, logs their entry and exit times at key locations, and
+                            stores data in CSV format for movement pattern analysis. The system also features dynamic
+                            counters to track unique and unknown faces, a user-friendly web interface to retrieve
+                            movement data by roll number and date, and emergency sign detection for real-time alerts in
+                            case of predefined hand gestures.</p>
+                    </div>
+                    <img src="detection .png" alt="Campus Track Image">
+                    <img src="emergencyhandsign.png" alt="emergencyhandsign">
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h2>JNTUH Navigation Website</h2>
+                    <div class="tech-stack">Technologies: HTML, CSS, JavaScript, Google Maps API</div>
+                    <div class="description">
+                        <p><span class="project-title">JNTUH Navigation</span>JNTUH Navigation is an interactive website
+                            designed to enhance the campus experience at Jawaharlal Nehru Technological University
+                            Hyderabad (JNTUH). It provides a simple, user-friendly directory of all major campus
+                            buildings, integrates with Google Maps for real-time navigation, and is fully
+                            mobile-friendly and responsive. The website was proudly used during JNTUH's Orientation 2024
+                            to help new students and their parents navigate the campus with ease.</p>
+                    </div>
+                    <img src="interface.jpeg" alt="JNTUH Navigation Website">
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h2>Time-Series Modeling of Negative Price Duration & Recovery</h2>
+                    <div class="tech-stack">Technologies: Python, LSTM, SARIMA, XGBoost, Pandas, Matplotlib</div>
+                    <div class="description">
+                        <p>We developed a predictive framework to analyze negative price events and recovery in European
+                            energy markets, using SARIMA, LSTM, and XGBoost, with a focus on Denmark due to its high
+                            occurrence of negative prices. The framework enhanced model performance by engineering
+                            time-based and price-based features like COSINE&SINE hour. The LSTM model achieved the best
+                            forecasting accuracy (R²: 0.92, RMSE: 16.72) and identified key factors influencing negative
+                            prices, such as weekdays, renewable energy availability, and cyclical patterns.</p>
+                    </div>
+                    <img src="LSTM.png" alt="Time-Series Modeling">
+                    <img src="LSTMneg.png" alt="Energy Market Modeling">
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <h2>Swedish to English Flashcard</h2>
+                    <div class="tech-stack">Technologies: Python, Tkinter, Pandas</div>
+                    <div class="description">
+                        <p><span class="project-title">Swedish to English Flashcard</span> helps with learning Swedish
+                            vocabulary using a flashcard-based application built with Python's Tkinter library.Displays
+                            Swedish words and their English equivalents.Enhances learning through a timed flashcard
+                            flip.Data-driven with randomization for vocabulary retention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Data Science', 'AI', 'Front-end Web development', 'Cloud computing', '&amp; DevOps'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
