@@ -18,6 +18,159 @@
             scroll-behavior: smooth;
         }
 
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+                margin: 100px 20px;
+            }
+
+            .firstSection>div {
+                width: 100%;
+                text-align: center;
+            }
+
+            .rightSection img {
+                margin: 20px auto;
+                width: 250px;
+            }
+
+            .leftSection {
+                font-size: 1.5rem;
+            }
+
+            .educationSection,
+            .skillsSection,
+            .experienceSection,
+            .Projects {
+                padding: 30px 20px;
+            }
+
+            .skillCard {
+                width: 150px;
+                height: 150px;
+                padding: 20px;
+            }
+
+            .skillCard i {
+                font-size: 2.5rem;
+            }
+
+            .skillCard h2 {
+                font-size: 1.2rem;
+            }
+
+            .project-card img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .skillsContainer,
+            .experienceContainer,
+            .projectsContainer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skillCard {
+                width: 120px;
+                height: 120px;
+            }
+
+            .experienceCard {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .expLogo {
+                margin-bottom: 15px;
+            }
+
+            .expDetails {
+                text-align: center;
+            }
+
+            .project-card {
+                padding: 15px;
+            }
+
+            .project-card h2 {
+                font-size: 20px;
+            }
+
+            .project-card .description {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .left {
+                font-size: 1.2rem;
+            }
+
+            .leftSection {
+                font-size: 1.2rem;
+            }
+
+            .skillsSection h1,
+            .educationSection h1,
+            .experienceSection h1,
+            .Projects h1 {
+                font-size: 1.8rem;
+            }
+
+            .skillCard {
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+            }
+
+            .skillCard i {
+                font-size: 2rem;
+            }
+
+            .skillCard h2 {
+                font-size: 1rem;
+            }
+
+            .project-card .description {
+                font-size: 14px;
+            }
+
+            .project-card h2 {
+                font-size: 18px;
+            }
+
+            .expDetails h2 {
+                font-size: 1.3rem;
+            }
+
+            .expDetails h3,
+            .duration,
+            .location {
+                font-size: 0.9rem;
+            }
+        }
+
+
         * {
             margin: 0;
             padding: 0;
