@@ -67,7 +67,7 @@
             }
         }
 
-        @media screen and (max-width: 768px) {
+        /* @media screen and (max-width: 768px) {
             nav {
                 flex-direction: column;
                 height: auto;
@@ -119,15 +119,61 @@
             .project-card .description {
                 font-size: 16px;
             }
-        }
+        } */
 
         @media screen and (max-width: 480px) {
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            .right {
+                width: 100%;
+                display: none;
+            }
+
+            .right ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .right ul li {
+                margin: 10px 0;
+                text-align: left;
+            }
+
+            .right.show {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+
+
+
+
             .left {
                 font-size: 1.2rem;
             }
 
             .leftSection {
                 font-size: 1.2rem;
+            }
+
+            .educationSection {
+                max-width: 100px;
+                height: auto;
+
             }
 
             .skillsSection h1,
@@ -550,17 +596,19 @@
     <header>
         <nav>
             <div class="left">Sri Kashyap Dongari - Portfolio</div>
-            <div class="right">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="right" id="navLinks">
                 <ul>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Education">Education</a></li>
                     <li><a href="#Skills">Skills</a></li>
                     <li><a href="#Experience">Experience</a></li>
                     <li><a href="#Projects">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
+                    <!-- <li><a href="/">Contact Me</a></li> -->
                 </ul>
             </div>
         </nav>
+
     </header>
     <main>
         <section id="About" class="firstSection">
@@ -770,6 +818,10 @@
             strings: ['Data Science', 'AI', 'Front-end Web development', 'Cloud computing', '&amp; DevOps'],
             typeSpeed: 50,
         });
+        function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('show');
+    }
     </script>
 </body>
 
